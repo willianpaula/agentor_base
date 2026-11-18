@@ -72,6 +72,7 @@ pnpm verify
 Roda `pnpm typecheck` (TypeScript estrito) e `pnpm test`. Os testes ficam em `tests/`:
 
 - `tests/unit/`: o seam `ctx.knowledge` sobre um `Context` real do Cordis, o provider de arquivos (inclusive documentos com CRLF), a tool `knowledge_search` no pipeline real de tools do DSH, o adaptador offline e a criação do profile.
+- `tests/unit/avaliacao.test.ts` e `tests/avaliacao/`: cinco perguntas de avaliação (três de desenvolvimento, duas reservadas) com resultado esperado, fonte e regra de aprovação. `pnpm avaliacao` roda as de desenvolvimento pelo agente e aplica a regra; as reservadas só rodam na avaliação final ([entrega #27](docs/entregas/27-perguntas-de-avaliacao.md)).
 - `tests/e2e/`: sobem o `dsh` publicado com um `DSH_HOME` temporário. Inclui o teste de política **"nenhum pacote DeepSeek na árvore composta"**, que falha se uma mudança reintroduzir um plugin específico da DeepSeek.
 
 ## Estrutura

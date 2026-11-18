@@ -1,0 +1,41 @@
+[
+  {
+    "id": "D1-padrao-de-branch",
+    "conjunto": "desenvolvimento",
+    "tipo": "respondivel",
+    "pergunta": "Qual o padrão de nome de branch no Tarefas Exemplo?",
+    "resultadoEsperado": "O nome segue o padrão tipo/numero-da-issue-descricao-curta (ex.: correcao/42-botao-arquivar), com os tipos funcionalidade, correcao e documentacao.",
+    "fonte": { "documento": "guia-de-primeira-contribuicao.md", "secao": "Criar a branch" },
+    "regra": {
+      "texto": "Aprovada se a resposta cita o documento guia-de-primeira-contribuicao.md e contém o padrão tipo/numero-da-issue-descricao-curta.",
+      "deveConter": [["tipo/numero-da-issue-descricao-curta"]],
+      "naoDeveConter": []
+    }
+  },
+  {
+    "id": "D2-jornada-semanal",
+    "conjunto": "desenvolvimento",
+    "tipo": "respondivel",
+    "pergunta": "Quantas horas por semana é a jornada do estagiário?",
+    "resultadoEsperado": "30 horas semanais (6 horas diárias).",
+    "fonte": { "documento": "manual-do-estagiario.md", "secao": "Jornada e ponto eletrônico" },
+    "regra": {
+      "texto": "Aprovada se a resposta cita o documento manual-do-estagiario.md e contém \"30 horas\". Reprovada se afirmar outra carga semanal (20, 40 ou 44 horas).",
+      "deveConter": [["30 horas"]],
+      "naoDeveConter": ["20 horas", "40 horas", "44 horas"]
+    }
+  },
+  {
+    "id": "D3-valor-da-bolsa",
+    "conjunto": "desenvolvimento",
+    "tipo": "sem-resposta",
+    "pergunta": "Qual é o valor da bolsa-auxílio do estagiário?",
+    "resultadoEsperado": "O material não informa o valor da bolsa. A resposta declara que a informação não está na base e orienta procurar o mentor ou o RH, sem inventar valor nem citar trecho como se respondesse.",
+    "fonte": null,
+    "regra": {
+      "texto": "Aprovada se a resposta declara que a base não tem a informação, não apresenta trecho de documento como resposta (nenhum \"documento:\" nem nome de arquivo .md) e não informa valor em reais.",
+      "deveConter": [],
+      "naoDeveConter": ["R$", "reais"]
+    }
+  }
+]

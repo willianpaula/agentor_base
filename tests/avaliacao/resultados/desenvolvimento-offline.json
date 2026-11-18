@@ -1,0 +1,39 @@
+{
+  "data": "2026-11-18",
+  "conjunto": "desenvolvimento",
+  "modo": "offline",
+  "aprovadas": 2,
+  "total": 3,
+  "resultados": [
+    {
+      "id": "D1-padrao-de-branch",
+      "tipo": "respondivel",
+      "pergunta": "Qual o padrão de nome de branch no Tarefas Exemplo?",
+      "regra": "Aprovada se a resposta cita o documento guia-de-primeira-contribuicao.md e contém o padrão tipo/numero-da-issue-descricao-curta.",
+      "resposta": "Resposta offline (sem LLM real) baseada na base de conhecimento:\n[1] Guia de primeira contribuição no Tarefas Exemplo (fonte: exemplo-manual, documento: guia-de-primeira-contribuicao.md)\n## Criar a branch Crie a branch a partir da `main` atualizada. O nome segue o padrão `tipo/numero-da-issue-descricao-curta`, por exemplo `correcao/42-botao-arquivar`. Os tipos aceitos são `funcionalidade`, `correcao` e `documentacao`.\n[2] Apresentação do repositório Tarefas Exemplo (fonte: exemplo-manual, documento: repositorio-tarefas-exemplo.md)\n## O que é o Tarefas Exemplo O Tarefas Exemplo é uma aplicação web de lista de tarefas usada pelo time de desenvolvimento do Cliente Exemplo para treinar quem acaba de chegar. Ela permite criar, concluir e arquivar tarefas e agrupar tarefas em quadros. O repositório é pequeno de propósito: dá para ler o código inteiro em uma tarde.\n[3] Manual do Estagiário — Cliente Exemplo (fonte: exemplo-manual, documento: manual-do-estagiario.md)\n# Manual do Estagiário — Cliente Exemplo Documento fictício usado para validar a base de conhecimento. Não descreve uma empresa real.",
+      "aprovado": true,
+      "motivos": []
+    },
+    {
+      "id": "D2-jornada-semanal",
+      "tipo": "respondivel",
+      "pergunta": "Quantas horas por semana é a jornada do estagiário?",
+      "regra": "Aprovada se a resposta cita o documento manual-do-estagiario.md e contém \"30 horas\". Reprovada se afirmar outra carga semanal (20, 40 ou 44 horas).",
+      "resposta": "Resposta offline (sem LLM real) baseada na base de conhecimento:\n[1] Manual do Estagiário — Cliente Exemplo (fonte: exemplo-manual, documento: manual-do-estagiario.md)\n## Jornada e ponto eletrônico A jornada do estagiário é de 6 horas diárias, 30 horas semanais. O ponto eletrônico é registrado no aplicativo Ponto Exemplo na entrada, na saída para o intervalo, no retorno e na saída final. Esquecimentos de marcação devem ser justificados ao mentor no mesmo dia pelo formulário de ajuste de ponto.\n[2] Política de Segurança da Informação — resumo para estagiários (fonte: exemplo-manual, documento: politica-de-seguranca.md)\n# Política de Segurança da Informação — resumo para estagiários Documento fictício usado para validar a base de conhecimento.",
+      "aprovado": true,
+      "motivos": []
+    },
+    {
+      "id": "D3-valor-da-bolsa",
+      "tipo": "sem-resposta",
+      "pergunta": "Qual é o valor da bolsa-auxílio do estagiário?",
+      "regra": "Aprovada se a resposta declara que a base não tem a informação, não apresenta trecho de documento como resposta (nenhum \"documento:\" nem nome de arquivo .md) e não informa valor em reais.",
+      "resposta": "Resposta offline (sem LLM real) baseada na base de conhecimento:\n[1] Manual do Estagiário — Cliente Exemplo (fonte: exemplo-manual, documento: manual-do-estagiario.md)\n# Manual do Estagiário — Cliente Exemplo Documento fictício usado para validar a base de conhecimento. Não descreve uma empresa real.\n[2] Política de Segurança da Informação — resumo para estagiários (fonte: exemplo-manual, documento: politica-de-seguranca.md)\n# Política de Segurança da Informação — resumo para estagiários Documento fictício usado para validar a base de conhecimento.",
+      "aprovado": false,
+      "motivos": [
+        "não declara que a base não tem a informação",
+        "apresenta trecho de documento como resposta"
+      ]
+    }
+  ]
+}

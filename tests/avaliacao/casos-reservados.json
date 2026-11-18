@@ -1,0 +1,28 @@
+[
+  {
+    "id": "R1-aprovacao-do-merge",
+    "conjunto": "reservado",
+    "tipo": "respondivel",
+    "pergunta": "Quem precisa aprovar a primeira contribuição antes do merge?",
+    "resultadoEsperado": "O mentor e mais uma pessoa do time.",
+    "fonte": { "documento": "guia-de-primeira-contribuicao.md", "secao": "Abrir o pull request" },
+    "regra": {
+      "texto": "Aprovada se a resposta cita o documento guia-de-primeira-contribuicao.md e menciona as duas aprovações: o mentor e mais uma pessoa do time.",
+      "deveConter": [["mentor"], ["mais uma pessoa", "outra pessoa", "outro membro", "mais um membro"]],
+      "naoDeveConter": []
+    }
+  },
+  {
+    "id": "R2-trabalho-remoto",
+    "conjunto": "reservado",
+    "tipo": "sem-resposta",
+    "pergunta": "Estagiário pode trabalhar de casa alguns dias da semana?",
+    "resultadoEsperado": "O material não trata de trabalho remoto. A resposta declara que a informação não está na base e orienta procurar o mentor, sem inventar regra.",
+    "fonte": null,
+    "regra": {
+      "texto": "Aprovada se a resposta declara que a base não tem a informação e não apresenta trecho de documento como resposta (nenhum \"documento:\" nem nome de arquivo .md).",
+      "deveConter": [],
+      "naoDeveConter": []
+    }
+  }
+]
