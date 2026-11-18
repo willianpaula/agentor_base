@@ -1,0 +1,25 @@
+[
+  {
+    "id": "positivo",
+    "tipo": "positivo",
+    "consulta": "Onde retiro o crachá no primeiro dia?",
+    "esperado": {
+      "documentId": "manual-do-estagiario.md",
+      "trechoContem": "recebe o crachá na recepção"
+    }
+  },
+  {
+    "id": "negativo",
+    "tipo": "negativo",
+    "consulta": "Como peço reembolso de transporte?",
+    "esperado": {
+      "ausencia": true
+    }
+  },
+  {
+    "id": "limitacao-plano-de-saude",
+    "tipo": "limitacao",
+    "consulta": "Qual é o plano de saúde dos estagiários?",
+    "observacao": "A base não trata de plano de saúde, mas a palavra 'plano' aparece em 'plano de estudos'. A busca lexical devolve trechos sem relação, com score baixo. Registrado como referência para comparar com a busca semântica; não é critério de aceite."
+  }
+]

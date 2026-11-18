@@ -1,0 +1,30 @@
+{
+  "caso": {
+    "id": "negativo",
+    "tipo": "negativo",
+    "consulta": "Como peço reembolso de transporte?",
+    "esperado": {
+      "ausencia": true
+    }
+  },
+  "entrada": {
+    "consulta": "Como peço reembolso de transporte?",
+    "limite": 5,
+    "fonte": {
+      "id": "exemplo-manual",
+      "description": "Manual do estagiário e políticas internas do cliente exemplo",
+      "root": "config/clients/exemplo/conhecimento",
+      "extensions": [
+        ".md",
+        ".markdown",
+        ".txt"
+      ],
+      "maxExcerptChars": 800
+    }
+  },
+  "saida": {
+    "trechos": [],
+    "falhas": [],
+    "textoParaOModelo": "Nenhum trecho encontrado na base de conhecimento do cliente."
+  }
+}

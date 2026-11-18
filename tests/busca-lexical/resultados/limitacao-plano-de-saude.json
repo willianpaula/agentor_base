@@ -1,0 +1,43 @@
+{
+  "caso": {
+    "id": "limitacao-plano-de-saude",
+    "tipo": "limitacao",
+    "consulta": "Qual é o plano de saúde dos estagiários?",
+    "observacao": "A base não trata de plano de saúde, mas a palavra 'plano' aparece em 'plano de estudos'. A busca lexical devolve trechos sem relação, com score baixo. Registrado como referência para comparar com a busca semântica; não é critério de aceite."
+  },
+  "entrada": {
+    "consulta": "Qual é o plano de saúde dos estagiários?",
+    "limite": 5,
+    "fonte": {
+      "id": "exemplo-manual",
+      "description": "Manual do estagiário e políticas internas do cliente exemplo",
+      "root": "config/clients/exemplo/conhecimento",
+      "extensions": [
+        ".md",
+        ".markdown",
+        ".txt"
+      ],
+      "maxExcerptChars": 800
+    }
+  },
+  "saida": {
+    "trechos": [
+      {
+        "sourceId": "exemplo-manual",
+        "documentId": "manual-do-estagiario.md",
+        "title": "Manual do Estagiário — Cliente Exemplo",
+        "excerpt": "## Primeiro dia No primeiro dia o estagiário recebe o crachá na recepção, participa da integração com o RH às 9h e é apresentado ao seu mentor, que acompanha o plano de estudos das primeiras quatro semanas.",
+        "score": 0.3
+      },
+      {
+        "sourceId": "exemplo-manual",
+        "documentId": "politica-de-seguranca.md",
+        "title": "Política de Segurança da Informação — resumo para estagiários",
+        "excerpt": "# Política de Segurança da Informação — resumo para estagiários Documento fictício usado para validar a base de conhecimento.",
+        "score": 0.3
+      }
+    ],
+    "falhas": [],
+    "textoParaOModelo": "[1] Manual do Estagiário — Cliente Exemplo (fonte: exemplo-manual, documento: manual-do-estagiario.md)\n## Primeiro dia No primeiro dia o estagiário recebe o crachá na recepção, participa da integração com o RH às 9h e é apresentado ao seu mentor, que acompanha o plano de estudos das primeiras quatro semanas.\n[2] Política de Segurança da Informação — resumo para estagiários (fonte: exemplo-manual, documento: politica-de-seguranca.md)\n# Política de Segurança da Informação — resumo para estagiários Documento fictício usado para validar a base de conhecimento."
+  }
+}

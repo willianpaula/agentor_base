@@ -1,0 +1,39 @@
+{
+  "caso": {
+    "id": "positivo",
+    "tipo": "positivo",
+    "consulta": "Onde retiro o crachá no primeiro dia?",
+    "esperado": {
+      "documentId": "manual-do-estagiario.md",
+      "trechoContem": "recebe o crachá na recepção"
+    }
+  },
+  "entrada": {
+    "consulta": "Onde retiro o crachá no primeiro dia?",
+    "limite": 5,
+    "fonte": {
+      "id": "exemplo-manual",
+      "description": "Manual do estagiário e políticas internas do cliente exemplo",
+      "root": "config/clients/exemplo/conhecimento",
+      "extensions": [
+        ".md",
+        ".markdown",
+        ".txt"
+      ],
+      "maxExcerptChars": 800
+    }
+  },
+  "saida": {
+    "trechos": [
+      {
+        "sourceId": "exemplo-manual",
+        "documentId": "manual-do-estagiario.md",
+        "title": "Manual do Estagiário — Cliente Exemplo",
+        "excerpt": "## Primeiro dia No primeiro dia o estagiário recebe o crachá na recepção, participa da integração com o RH às 9h e é apresentado ao seu mentor, que acompanha o plano de estudos das primeiras quatro semanas.",
+        "score": 0.6916666666666668
+      }
+    ],
+    "falhas": [],
+    "textoParaOModelo": "[1] Manual do Estagiário — Cliente Exemplo (fonte: exemplo-manual, documento: manual-do-estagiario.md)\n## Primeiro dia No primeiro dia o estagiário recebe o crachá na recepção, participa da integração com o RH às 9h e é apresentado ao seu mentor, que acompanha o plano de estudos das primeiras quatro semanas."
+  }
+}

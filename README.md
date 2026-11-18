@@ -72,6 +72,7 @@ pnpm verify
 Roda `pnpm typecheck` (TypeScript estrito) e `pnpm test`. Os testes ficam em `tests/`:
 
 - `tests/unit/`: o seam `ctx.knowledge` sobre um `Context` real do Cordis, o provider de arquivos (inclusive documentos com CRLF), a tool `knowledge_search` no pipeline real de tools do DSH, o adaptador offline e a criação do profile.
+- `tests/unit/busca-lexical.test.ts`: busca lexical de referência sobre os documentos do cliente `exemplo`, com um caso positivo e um negativo. Entrada e saída de cada caso ficam salvas em `tests/busca-lexical/resultados/` para revisão; o teste falha se o salvo divergir da execução atual. Para regravar depois de mudar a busca ou os documentos: `pnpm busca-lexical` (e revise o diff).
 - `tests/e2e/`: sobem o `dsh` publicado com um `DSH_HOME` temporário. Inclui o teste de política **"nenhum pacote DeepSeek na árvore composta"**, que falha se uma mudança reintroduzir um plugin específico da DeepSeek.
 
 ## Estrutura
@@ -88,8 +89,9 @@ config/                   configuração (sem segredos)
   clients/exemplo/        cliente de exemplo: LLM, modelo e fontes de conhecimento
   offline.patch.yml       overlay que troca o LLM pelo adaptador offline
   .env.example            nomes das variáveis de chave, sem valores
-scripts/                  lançador e criação do profile
+scripts/                  lançador, criação do profile e casos da busca lexical
 tests/                    testes unitários e e2e
+  busca-lexical/          casos e resultados salvos da busca lexical de referência
 docs/                     arquitetura, clientes, registro de execução, roadmap, especificações, entregas
 ```
 
